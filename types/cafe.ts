@@ -1,8 +1,9 @@
 export interface Cafe {
   name: string
   query: string
-  description: string // base64 encoded markdown
+  description: string // multiline markdown string
   kiez: string // Added kiez field for neighborhood information
+  rating: number // Added rating field (1-5 stars)
   metadata: {
     coffee_chain: boolean
     inside_sitting: boolean
@@ -10,6 +11,7 @@ export interface Cafe {
     sanitary_facilities: boolean
     self_service: boolean
     wifi: boolean
+    electricity: boolean // Added electricity/sockets availability
   }
   urls: {
     google_maps: string
@@ -24,4 +26,5 @@ export interface FilterState {
   sanitary_facilities: boolean | null
   self_service: boolean | null
   wifi: boolean | null
+  electricity: boolean | null // Added electricity filter
 }

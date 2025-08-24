@@ -1,6 +1,17 @@
 "use client"
 
-import { MapPin, ExternalLink, Wifi, Users, Utensils, WashingMachine, Building2, HandPlatter, Map } from "lucide-react"
+import {
+  MapPin,
+  ExternalLink,
+  Wifi,
+  Users,
+  Utensils,
+  WashingMachine,
+  Building2,
+  HandPlatter,
+  Map,
+  Zap,
+} from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -26,6 +37,8 @@ export function CafeCard({ cafe }: CafeCardProps) {
         return <HandPlatter className="h-4 w-4" />
       case "wifi":
         return <Wifi className="h-4 w-4" />
+      case "electricity":
+        return <Zap className="h-4 w-4" />
       case "kiez":
         return <Map className="h-4 w-4" />
       default:
@@ -47,6 +60,8 @@ export function CafeCard({ cafe }: CafeCardProps) {
         return "Self-service"
       case "wifi":
         return "WiFi"
+      case "electricity":
+        return "Electricity"
       case "kiez":
         return cafe.kiez
       default:

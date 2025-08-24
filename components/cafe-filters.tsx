@@ -1,6 +1,6 @@
 "use client"
 
-import { Building2, Users, Utensils, WashingMachine, Wifi } from "lucide-react"
+import { Building2, Users, Utensils, WashingMachine, HandPlatter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { FilterState } from "@/types/cafe"
 
@@ -15,7 +15,7 @@ export function CafeFilters({ filters, onFiltersChange }: CafeFiltersProps) {
     { key: "inside_sitting", label: "Indoor Seating", icon: Users },
     { key: "outside_sitting", label: "Outdoor Seating", icon: Utensils },
     { key: "sanitary_facilities", label: "Restroom", icon: WashingMachine },
-    { key: "self_service", label: "Self-service", icon: Wifi },
+    { key: "self_service", label: "Self-service", icon: HandPlatter },
   ] as const
 
   const toggleFilter = (key: keyof FilterState) => {
