@@ -9,9 +9,7 @@ export function fuzzySearch(cafes: Cafe[], query: string): Cafe[] {
     .filter((term) => term.length > 0)
 
   return cafes.filter((cafe) => {
-    // Decode description for searching
-    const decodedDescription = atob(cafe.description).toLowerCase()
-    const searchableText = `${cafe.name} ${cafe.query} ${decodedDescription}`.toLowerCase()
+    const searchableText = `${cafe.name} ${cafe.query} ${cafe.description} ${cafe.kiez}`.toLowerCase()
 
     // Check if all search terms are found in the searchable text
     return searchTerms.every(
