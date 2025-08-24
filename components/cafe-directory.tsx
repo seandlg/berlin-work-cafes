@@ -5,6 +5,7 @@ import { Search, Coffee } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { CafeCard } from "./cafe-card"
 import { CafeFilters } from "./cafe-filters"
+import { ThemeToggle } from "./theme-toggle"
 import { cafesData } from "@/data/cafes"
 import { fuzzySearch } from "@/lib/fuzzy-search"
 import type { FilterState } from "@/types/cafe"
@@ -41,6 +42,9 @@ export function CafeDirectory() {
     <div className="container mx-auto px-4 py-8 max-w-6xl">
       {/* Hero Section */}
       <div className="relative mb-12 rounded-lg overflow-hidden">
+        <div className="absolute top-4 right-4 z-10">
+          <ThemeToggle />
+        </div>
         <img
           src="/images/cafe-hero.jpg"
           alt="Modern cafe interior with laptop-friendly workspace"
