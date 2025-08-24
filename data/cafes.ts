@@ -94,8 +94,8 @@ export const cafesData: Cafe[] = [
       electricity: true, // Sockets available indoors
     },
     urls: {
-      google_maps: "https://maps.app.goo.gl/ostbahnhof", // Placeholder URL
-      website: "https://espressohouse.com/",
+      google_maps: "https://maps.app.goo.gl/8dwthxcyAzqs5XR8A",
+      website: "https://de.espressohouse.com/find-us/ostbahnhof",
     },
   },
 ]
